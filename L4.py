@@ -63,6 +63,7 @@ def comparare(x,y):
     if x["nume"].lower()>y["nume"].lower():
         return False
     return False
+
 def sortare(lista, stanga=0, dreapta=None):
     if dreapta is None:
         dreapta=len(lista)-1
