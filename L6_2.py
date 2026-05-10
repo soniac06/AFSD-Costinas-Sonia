@@ -2,12 +2,12 @@ import random
 import matplotlib.pyplot as plt
 
 def genereaza_vector(n):
-    return random.sample(range(1, n*10), n)
+    return random.sample(range(1, n*10), n) #Alege exact n valori DIFERITE
 
-def cautare_randomizata(vector, valoare_cautata):
-    indici=list(range(len(vector)))
+def cautare_randomizata(vector, valoare_cautata): #caută elementul în ordine aleatoare
+    indici=list(range(len(vector))) #Creează lista pozițiilor vectorului
     random.shuffle(indici)
-    pasi=0
+    pasi=0 #Reține câte verificări face algoritmul
     for index in indici:
         pasi+=1
         if vector[index]==valoare_cautata:
@@ -16,7 +16,7 @@ def cautare_randomizata(vector, valoare_cautata):
 
 n=1000
 vector=genereaza_vector(n)
-valoare_cautata=random.choice(vector)
+valoare_cautata=random.choice(vector) #Alege aleator un element care există sigur în vector
 print("Valoare căutată:", valoare_cautata)
 numar_rulari=30
 lista_pasi=[]
